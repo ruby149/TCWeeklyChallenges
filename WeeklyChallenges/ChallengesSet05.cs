@@ -7,7 +7,16 @@ namespace WeeklyChallenges
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            throw new NotImplementedException();
+            
+                for (var i = startNumber + 1; i < (startNumber + n) + 1; i++)
+                {
+                    if (i % n == 0)
+                    {
+                        return i;
+                    }
+                }
+                return 0;
+            
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)

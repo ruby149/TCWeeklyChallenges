@@ -31,6 +31,8 @@ namespace WeeklyChallenges
             return (sum % 2 != 0);
         }
 
+
+
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
             var isLower = false;
@@ -106,11 +108,46 @@ namespace WeeklyChallenges
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            for (int i = 0; i < words.Length; i++)
+          for(var i =0;i<words.Length;i++)
             {
-                words[i] = words[i].ToUpper();
+              words[i] =  words[i].ToUpper();
             }
 
         }
+
+       /* static void Main(string[] args)
+        {
+            Console.WriteLine(PasswordContainUpperLowerAndNumber("21Mimi"));
+        }
+        public static bool PasswordContainUpperLowerAndNumber(string password) // 1Wm2dv ==> 1 // W
+        {
+            int upperCounter = 0; // 1
+            int lowerCounter = 0; // 3
+            int numberCounter = 0; // 2
+            char[] myArray = password.ToCharArray();
+            foreach (var item in myArray)
+            {
+                if (Char.IsLower(item))
+                {
+                    lowerCounter = lowerCounter + 1;
+                }
+                if (Char.IsUpper(item))
+                {
+                    upperCounter = upperCounter + 1;
+                }
+                if (Char.IsNumber(item))
+                {
+                    numberCounter = numberCounter + 1;
+                }
+            }
+            if (upperCounter > 0 && lowerCounter > 0 && numberCounter > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }*/
+        
     }
 }

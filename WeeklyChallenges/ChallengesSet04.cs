@@ -48,7 +48,7 @@ namespace WeeklyChallenges
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            var amount = objs.Length;
+            /*var amount = objs.Length;
             var majority = (amount / 2) + 1;
 
             var count = 0;
@@ -62,6 +62,30 @@ namespace WeeklyChallenges
             }
 
             if (count >= majority)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+*/
+            int nullCounter = 0;
+            int notNullCounter = 0;
+
+            foreach (var item in objs)
+            {
+                if (item == null)
+                {
+                    nullCounter = nullCounter + 1;
+                }
+                else
+                {
+                    notNullCounter = notNullCounter + 1;
+                }
+
+            }
+            if (nullCounter > notNullCounter)
             {
                 return true;
             }
